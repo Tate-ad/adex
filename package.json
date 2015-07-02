@@ -1,0 +1,10 @@
+{
+    "name": "adex",
+    "version": "0.0.1",
+    "main": "adex.html",
+    "window": {
+        "width": 800,
+        "heigth": 600,
+        "toolbar": true
+    }
+}
