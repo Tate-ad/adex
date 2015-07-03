@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "main": "adex.html",
     "window": {
-        "width": 800,
-        "heigth": 600,
+        "width": 1024,
+        "heigth": 768,
         "toolbar": true
     }
 }

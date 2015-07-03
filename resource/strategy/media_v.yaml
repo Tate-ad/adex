@@ -1,0 +1,30 @@
+name: media_v
+
+desc: This is the media_v ployes
+
+ploys:
+
+- mid: dasfdsaf2342432fdsa
+  pid: media_v1
+
+  ruleset:
+
+  - match: gender
+    value: woman
+    price: +0.4
+    required: true
+
+  - match: age
+    value: [20, 29]
+    price: +0.3
+    required: true
+
+  - match: people_count
+    value: [2, 999999999]
+    price: +0.2
+    required: true
+
+  - match: weather
+    value: rain
+    price: +0.3
+    required: true

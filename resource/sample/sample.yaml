@@ -1,0 +1,30 @@
+desc: This is the ipinyou ployes
+
+name: ipinyou
+
+ployes:
+
+- mid: dasfdsaf2342432fdsa
+  pid: ipinyou1
+
+  ruleset:
+
+  - match: gender
+    value: woman
+    price: +0.4
+    required: true
+
+  - match: age
+    value: [20, 29]
+    price: +0.3
+    required: true
+
+  - match: people_count
+    value: [2, 999999999]
+    price: +0.2
+    required: true
+
+  - match: weather
+    value: rain
+    price: +0.3
+    required: true

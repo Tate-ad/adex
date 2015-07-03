@@ -1,16 +1,19 @@
 var fs = require("fs");
 var path = require("path");
+var util = require("./utils.js");
 
 
 function PloyStore(){
     var self = this;
-    self.ploies = {};
+    self.ploys = {};
 }
 
 
 PloyStore.prototype.add_ploy = function(ploy){
+
+    var self = this;
     if(typeof ploy === "object"){
-        self.ploies[ploy] = ploy.ploies;
+        self.ploys[ploy.name] = ploy.ploys;
     }else{
         throw new Error("The ploy must be object");
     }
@@ -19,19 +22,20 @@ PloyStore.prototype.add_ploy = function(ploy){
 
 PloyStore.prototype.ploy = function(name){
     var self = this;
-    if(!(name in self.ploies)){
+    if(!(name in self.ploys)){
         return null;
     }
-    return self.ploies.name;
+    return self.ploys.name;
 };
 
 
-Plrototype.prototype.load_folder = function(folder){
+PloyStore.prototype.load_folder = function(folder){
     var self = this;
     var tt = fs.readdirSync(folder);
     tt.forEach(function(fname, index){
-        var ss = fs.readFileSync(path.join(folder, fname), 'utf8');
-        self.add_ploy(JSON.parse(ss));
+        var ss = path.join(folder, fname);
+        self.add_ploy(util.load_obj(ss));
    });
 };
 
+exports.PloyStore = PloyStore;
