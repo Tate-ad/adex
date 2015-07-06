@@ -1,31 +1,22 @@
 var fs = require("fs");
+var filter = require("./filter.js");
 
-
-function BidEngine(ploystore){
+function BidEngine(ploystore, folder){
     var self = this;
-    self.ploy_bid = ploystore.ploys;
+    self.ploy_bid = ploystore;
+    self.init(folder);
 }
 
 
-BidEngine.prototype.inner_bid = function(input, rules){
-
-    var floor = input.device.floor;
-    var sence = input.sence;
-
-    if(!(rules instanceof Array)){
-        throw new Error("The rules must bu array");
-    }
-
-    rules.forEach(function(item, index){
-        if(item.required){
-            if(sence[item.match] == item.value){
-                floor += item.price;
-            }
-        }
-    });
-    
-    return floor;
+BidEngine.prototype.init = function(folder){
+    var self = this;
+    self.ploy_bid.load_folder(folder);
 };
 
 
-exports.BidEngine = BidEngine;
+BidEngine.prototype.filter = function(input, rules){
+    var self = this;
+    rules.forEach(function(item, index){
+
+    });
+};

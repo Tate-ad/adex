@@ -5,7 +5,7 @@ uid: media_v
 orders:
 
 - oid: 087e91bd6df2
-  mid: 5e79d83927e2
+  mid: /home/tate/Public/media_v1.mp4
   regions:
   - 海淀
   - 朝阳
@@ -36,7 +36,7 @@ orders:
     required: false
 
 - oid: 8b4a894b3700
-  mid: 71ab80c99c2a
+  mid: /home/tate/Public/media_v2.mp4
   regions:
   - 昌平
   duration:

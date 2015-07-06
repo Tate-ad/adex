@@ -1,11 +1,24 @@
 device:
+
   id: 62b77266-bbd9-4c76-9bb8-b73ee0561d08 
+
   os: ubuntu14.10
-  floor: 1.5
-  region: 海淀
+
+  property:
+    floor: 1.5
+    region: 海淀
+
 
 sence:
-  gender: woman
-  people_count: 1
-  age: 25
-  weather: rain
+
+  - match: gender
+    value: woman
+
+  - match: people_count
+    value: 1
+
+  - match: age
+    value: 25
+
+  - match: weather
+    value: rain
