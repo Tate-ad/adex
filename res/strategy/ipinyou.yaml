@@ -1,5 +1,6 @@
-desc: 品友针对年轻女性的广告投放
 uid: ipinyou
+
+desc: 品友针对年轻女性的广告投放
 
 orders:
   - oid: 087e91bd6df2
@@ -9,31 +10,26 @@ orders:
       start: 2015-07-01
       finish: 2015-07-07
     rules:
-    - match: gender
-      value: woman
+    - gender: woman
       price: +0.4
       required: true
-    - match: age
-      value: [20, 29]
+    - age: [20, 30]
       price: +0.3
       required: true
-    - match: people_count
-      value: [2, 999999999]
+    - people_count: 2
       price: +0.2
       required: false
-    - match: weather
-      value: rain
+    - weather: rain
       price: +0.3
       required: false
 
   - oid: 8b4a894b3700
     mid: /home/tate/Public/ipinyou2.mp4
-    regions: [昌平] 
+    regions: [海淀, 昌平] 
     duration:
       start: 2015-07-01
       finish: 2015-07-07
     rules:
-    - match: people_count
-      value: [3, 10]
+    - people_count: [3, 10]
       price: +0.5
       required: true

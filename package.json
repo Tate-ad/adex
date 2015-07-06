@@ -1,10 +1,13 @@
 {
-    "name": "adex",
-    "version": "0.0.1",
-    "main": "adex.html",
-    "window": {
-        "width": 1024,
-        "heigth": 768,
-        "toolbar": true
-    }
+  "name": "adex",
+  "version": "0.0.1",
+  "main": "adex.html",
+  "window": {
+    "width": 1024,
+    "heigth": 768,
+    "toolbar": true
+  },
+  "dependencies": {
+    "aureooms-js-itertools": "^1.1.2"
+  }
 }

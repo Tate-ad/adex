@@ -1,0 +1,17 @@
+device:
+
+  id: 62b77266-bbd9-4c76-9bb8-b73ee0561d08 
+
+  os: ubuntu14.10
+
+  property:
+    floor: 1.5
+    region: 海淀
+
+
+sence:
+  gender: woman
+  age: 30
+  weather: rain
+  people_count: 2
+  time: 2015-07-04 10:38:40.456
