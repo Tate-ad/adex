@@ -1,16 +1,31 @@
 var fs = require("fs");
-var util = require("./utils.js");
-var input = util.load_obj("/home/tate/project/node/node_webkit/adex/strategy/input.yaml");
 
 
 function BidEngine(ploystore){
     var self = this;
-    self.ploy_bid = ploystore;
+    self.ploy_bid = ploystore.ploys;
 }
 
 
-BidEngine.prototype.algo_sample = function(input){
-    for(var item in input){
-        console.log(x);
+BidEngine.prototype.inner_bid = function(input, rules){
+
+    var floor = input.device.floor;
+    var sence = input.sence;
+
+    if(!(rules instanceof Array)){
+        throw new Error("The rules must bu array");
     }
+
+    rules.forEach(function(item, index){
+        if(item.required){
+            if(sence[item.match] == item.value){
+                floor += item.price;
+            }
+        }
+    });
+    
+    return floor;
 };
+
+
+exports.BidEngine = BidEngine;

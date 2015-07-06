@@ -1,13 +1,19 @@
-name: media_v
+desc: 品友针对年轻女性的广告投放
 
-desc: This is the media_v ployes
+uid: media_v
 
-ploys:
+orders:
 
-- mid: dasfdsaf2342432fdsa
-  pid: media_v1
+- oid: 087e91bd6df2
+  mid: 5e79d83927e2
+  regions:
+  - 海淀
+  - 朝阳
+  duration:
+    start: 2015-07-01
+    finish: 2015-07-07
 
-  ruleset:
+  rules:
 
   - match: gender
     value: woman
@@ -22,9 +28,24 @@ ploys:
   - match: people_count
     value: [2, 999999999]
     price: +0.2
-    required: true
+    required: false
 
   - match: weather
     value: rain
     price: +0.3
+    required: false
+
+- oid: 8b4a894b3700
+  mid: 71ab80c99c2a
+  regions:
+  - 昌平
+  duration:
+    start: 2015-07-01
+    finish: 2015-07-07
+  
+  rules:
+  
+  - match: people_count
+    value: [3, 10]
+    price: +0.5
     required: true

@@ -13,7 +13,7 @@ PloyStore.prototype.add_ploy = function(ploy){
 
     var self = this;
     if(typeof ploy === "object"){
-        self.ploys[ploy.name] = ploy.ploys;
+        self.ploys[ploy.uid] = ploy.orders;
     }else{
         throw new Error("The ploy must be object");
     }

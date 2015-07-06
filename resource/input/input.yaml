@@ -2,10 +2,10 @@ device:
   id: 62b77266-bbd9-4c76-9bb8-b73ee0561d08 
   os: ubuntu14.10
   floor: 1.5
-  region: dongduhui
+  region: 海淀
 
 sence:
-  gender: man
+  gender: woman
   people_count: 1
   age: 25
-  weather: fine
+  weather: rain

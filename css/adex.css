@@ -2,3 +2,8 @@ h1 {
   color: red;
   font-family: Monaco;
 }
+
+#media_reuslt{
+  background-color: AntiqueWhite;
+  float: left;
+}
