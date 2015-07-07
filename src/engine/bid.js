@@ -24,6 +24,14 @@ Engine.prototype.bid_cell = function (sence, rules){
     var bid_price = 0;
     rules.forEach(function(item, index){
         for(var key in item){
+            if(Array.isArray(item[key])){
+                if((!tool.between_range(sence[key], item[key])) && item.required){
+                    break;
+                }else{
+                    bid_price += item.price;
+                    break;
+                }
+            }
             if(sence[key] !== item[key]){
                 if(item.required){
                     break;
@@ -71,6 +79,7 @@ Engine.prototype.bid = function(input){
     for(var uid in self.ploystore.ploys){
         tmp.push(self.bid_inner(input, self.ploystore.ploys[uid]));
     }
+    // console.log(tmp);
     return _.max(tmp, function(tt){
         return tt.final_price;
     });

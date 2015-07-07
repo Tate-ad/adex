@@ -1,9 +1,18 @@
 h1 {
-  color: red;
+  color: #cccccc;
   font-family: Monaco;
 }
 
-#media_reuslt{
-  background-color: AntiqueWhite;
-  float: left;
+.fyt{
+  float: right;
+}
+
+.media_result{
+  position: relative;
+}
+
+.result{
+  position: absolute;
+  left: 20px;
+  margin-top: 22px;
 }

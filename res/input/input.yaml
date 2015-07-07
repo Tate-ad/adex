@@ -11,7 +11,7 @@ device:
 
 sence:
   gender: woman
-  age: 30
+  age: 23 
   weather: rain
-  people_count: 2
+  people_count: 100 
   time: 2015-07-04 10:38:40.456
