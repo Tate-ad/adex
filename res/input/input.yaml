@@ -9,9 +9,9 @@ device:
     region: 昌平
 
 
-sence:
+scene:
   gender: woman
   age: 23 
   weather: rain
-  people_count: 100 
+  people_count: 1 
   time: 2015-07-04 10:38:40.456

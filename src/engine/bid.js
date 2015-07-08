@@ -20,19 +20,19 @@ Engine.prototype.init = function (folder) {
 };
 
 
-Engine.prototype.bid_cell = function (sence, rules){
+Engine.prototype.bid_cell = function (scene, rules){
     var bid_price = 0;
     rules.forEach(function(item, index){
         for(var key in item){
             if(Array.isArray(item[key])){
-                if((!tool.between_range(sence[key], item[key])) && item.required){
+                if((!tool.between_range(scene[key], item[key])) && item.required){
                     break;
                 }else{
                     bid_price += item.price;
                     break;
                 }
             }
-            if(sence[key] !== item[key]){
+            if(scene[key] !== item[key]){
                 if(item.required){
                     break;
                 }
@@ -53,7 +53,7 @@ Engine.prototype.bid_cell_i = function (input, order){
     if(!tool.in_region(device.property.region, order.regions)){
         return floor; 
     }
-    var final = self.bid_cell(input.sence, order.rules);
+    var final = self.bid_cell(input.scene, order.rules);
     return floor + final;
 };
 
