@@ -19,7 +19,7 @@ orders:
     - people_count: [2, 999999999]
       price: +0.2
       required: false
-    - weather: rain
+    - weather: fine
       price: +0.3
       required: false
 
@@ -30,6 +30,6 @@ orders:
       start: 2015-07-01
       finish: 2015-07-07
     rules:
-    - people_count: [2, 10]
+    - people_count: [2, 999999]
       price: +5.5
       required: true

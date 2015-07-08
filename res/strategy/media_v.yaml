@@ -6,7 +6,7 @@ orders:
 
 - oid: 087e91bd6df2
   mid: /home/tate/Public/media_v1.mp4
-  regions: [海淀, 朝阳]
+  regions: [昌平, 朝阳]
   duration:
     start: 2015-07-01
     finish: 2015-07-07
@@ -18,7 +18,7 @@ orders:
     required: true
 
   - age: [20, 29]
-    price: +0.1
+    price: +0.9
     required: true
 
   - people_count: [2, 999999999]
@@ -39,6 +39,6 @@ orders:
 
   rules:
 
-  - people_count: [3, 10]
-    price: +5.5
+  - people_count: [3, 999999999]
+    price: +6.5
     required: true
